@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>PHPUG Köln</title>
+
+    <meta name="author" content="PHPUG Köln">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:website" content="@PHPUGCGN" />
+    <meta property="og:url" content="https://cgn.phpug.net/moderation-slides/" />
+    <meta property="og:title" content="Moderation Slides" />
+    <meta property="og:description" content="Moderation Slides for the usergroup meeting" />
+    <meta property="og:image" content="https://cgn.phpug.net/moderation-slides/images/phpugcgn-logo.png" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/black.css" id="theme">
+
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/highlight.js/styles/idea.css">
+
+    <style type="text/css">
+      @media print {
+        body.print-pdf .slide-menu-button {
+          display: none;
+        }
+      }
+      .hljs-tag {
+        background-color: transparent;
+      }
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <style>
+      body > div.reveal {
+        background: radial-gradient(
+          ellipse at center,
+          rgba(255,255,255,0.1) 0%,
+          rgba(255,255,255,0.15) 50%,
+          rgba(255,255,255,0) 100%
+        );
+      }
+      ul.code {
+        font-family: monospace;
+      }
+
+      .reveal section ul li code,
+      .reveal code {
+        font-family: "Source Code Pro", monospace;
+      }
+      .reveal code .placeholder {
+        opacity: 0.65;
+      }
+      .reveal section img.scribble {
+        border: 1px solid silver;
+        background: white;
+        padding: 10px;
+        max-height: 500px;
+      }
+      .reveal section img.borderless {
+        border: none;
+        background: none;
+        padding: 0;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="reveal" data-video="small top-right">
+
+      <div class="slides">
+        <section>
+          <h1>PHP-driven e-commerce</h1>
+          <p>PHPUG Köln, September 2019</p>
+        </section>
+        <section>
+          <section>
+            <h2>Talks</h2>
+            <ul>
+              <li>Oro</li>
+              <li>Shopware</li>
+              <li>Spryker</li>
+              <li>Sylius</li>
+              <li>Magento</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Oro</h3>
+            <p>Sylvain Raye</p>
+          </section>
+          <section>
+            <h3>Shopware</h3>
+            <p>Jan Grubenbecher</p>
+          </section>
+          <section>
+            <h3>Spryker</h3>
+            <p>Till Hess</p>
+          </section>
+          <section>
+            <h3>Sylius</h3>
+            <ul>
+              <li>Upcoming 20. Sept. 2019: <a href="https://www.meetup.com/Sylius-Germany/events/263772115">3rd Sylius Hackathon</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Magento</h3>
+          </section>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: "c/t",
+
+        //showNotes: isPrintView ? true /*"separate-page" */ : false,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        //parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        //parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'bower_components/reveal.js-menu/menu.js' },
+          { src: 'bower_components/reveal-presenter-keys/src/presenter-keys.js' },
+          { src: 'bower_components/reveal-print/src/print.js' },
+
+          { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ],
+
+        menu: {
+          side: 'left',
+          markers: true,
+          numbers: false,
+          themes: [
+            { name: 'Black', theme: 'bower_components/reveal.js/css/theme/black.css' },
+            { name: 'White', theme: 'bower_components/reveal.js/css/theme/white.css' }
+          ]
+        },
+
+        badges: {
+          languages : false
+        },
+
+        presenter: {
+          profile: 'Lenovo Yoga Mouse'
+        },
+
+      });
+
+    </script>
+
+  </body>
+</html>
